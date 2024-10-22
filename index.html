@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+
+</script>
+  <title>arloUB</title>
+
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="styles/button.css">
+   <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+   <link rel="stylesheet" href="styles/styles.css">
+   <link rel="stylesheet" href="styles/styles.css">
+
+</head>
+<body>
+
+                 <button>open in about:blank</button>
+
+
+   <script>
+       var urlObj = new window.URL(window.location.href);
+       var url = ¨https://playcode.io/2054855";
+       var win;
+
+       document.querySelector('button').onclick = function() {
+           if (win) {
+               win.focus();
+           } else {
+               win = window.open();
+               win.document.body.style.margin = '0';
+               win.document.body.style.height = '100vh';
+               var iframe = win.document.createElement('iframe');
+               iframe.style.border = 'none';
+               iframe.style.width = '100%';
+               iframe.style.height = '100%';
+               iframe.style.margin = '0';
+               iframe.src = url;
+               win.document.body.appendChild(iframe);
+           }
+           document.querySelector('button').style.background = 'grey';
+           document.querySelector('button').innerHTML = "refresh page to open again";
+       };
+   </script>
+</body>
+</html>
